@@ -1,10 +1,13 @@
 import React from 'react'
 import './Styles/home.css'
 import Product from '../sections/Product'
+import Header from './Header'
 
 function Home() {
   return (
     <div>
+
+    <Header />
     <div 
     className="home__container flex justify-center mx-auto max-w-[1500px]">
     <img
