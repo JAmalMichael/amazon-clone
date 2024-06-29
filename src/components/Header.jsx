@@ -41,7 +41,7 @@ function Header() {
             </div>
 
             
-            <div className="header__optionBasket">
+            <div className="header__optionBasket flex items-center text-white">
                 <FaShoppingCart />
                 <span className="header__optionLineTwo header__basketCount">
                 0
