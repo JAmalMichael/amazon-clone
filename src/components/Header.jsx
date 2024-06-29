@@ -1,8 +1,55 @@
 import React from 'react'
+import './Styles/header.css'
+import { FaSearch } from 'react-icons/fa'
+import { FaShoppingCart } from 'react-icons/fa'
 
 function Header() {
   return (
-    <div>Header</div>
+            <div className='header bg-[#131921] flex h-[60px]
+            items-center sticky top-0 z-[100] '>
+            
+            <img
+            className="header__logo w-[100px] object-contain my-0 mx-[20px] mt-[18px]"
+            src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+            />
+        
+
+            <div className="header__search flex flex-1 items-center rounded-3xl">
+                <input className="header__searchInput h-[12px] p-[10px] w-[100%]" type="text" />
+                <FaSearch className="header__searchIcon p-[2px] bg-[#cd9042]" />
+            </div>
+
+            <div className="header__nav flex justify-evenly">
+                
+                <div className="header__option">
+                    <span className="header__optionLineOne">Hello Guest</span>
+                    <span className="header__optionLineTwo">Sign In</span>
+                </div>
+            
+
+            
+            <div className="header__option">
+                <span className="header__optionLineOne">Returns</span>
+                <span className="header__optionLineTwo">& Orders</span>
+            </div>
+            
+            
+
+            <div className="header__option">
+            <span className="header__optionLineOne">Your</span>
+            <span className="header__optionLineTwo">Prime</span>
+            </div>
+
+            
+            <div className="header__optionBasket">
+                <FaShoppingCart />
+                <span className="header__optionLineTwo header__basketCount">
+                0
+                </span>
+            </div>
+            
+        </div>
+        </div>
   )
 }
 
