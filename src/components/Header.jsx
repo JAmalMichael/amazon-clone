@@ -2,16 +2,23 @@ import React from 'react'
 import './Styles/header.css'
 import { FaSearch } from 'react-icons/fa'
 import { FaShoppingCart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+import { useStateValue } from "../api/StateProvider";
 
 function Header() {
+    const [{ basket, user }, dispatch] = useStateValue();
+
   return (
             <div className='header bg-[#131921] flex h-[60px]
             items-center sticky top-0 z-[100] '>
-            
+            <Link
+            to="/" >
             <img
             className="header__logo w-[100px] object-contain my-0 mx-[20px] mt-[18px]"
             src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
             />
+            </Link>
+            
         
 
             <div className="header__search flex flex-1 items-center rounded-3xl">
@@ -44,7 +51,7 @@ function Header() {
             <div className="header__optionBasket flex items-center text-white">
                 <FaShoppingCart />
                 <span className="header__optionLineTwo header__basketCount">
-                0
+                {basket?.length}
                 </span>
             </div>
             
