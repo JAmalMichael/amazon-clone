@@ -4,9 +4,16 @@ import { FaSearch } from 'react-icons/fa'
 import { FaShoppingCart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { useStateValue } from "../api/StateProvider";
+import { auth } from '../firebase';
 
 function Header() {
     const [{ basket, user }, dispatch] = useStateValue();
+
+    const handleAuthenticaton = () => {
+        if (user) {
+          auth.signOut();
+        }
+      }
 
   return (
             <div className='header bg-[#131921] flex h-[60px]
@@ -27,12 +34,13 @@ function Header() {
             </div>
 
             <div className="header__nav flex justify-evenly">
-                
-                <div className="header__option">
+
+                <Link to={!user && '/login'}>
+                <div className="header__option" onClick={handleAuthenticaton}> 
                     <span className="header__optionLineOne">Hello Guest</span>
-                    <span className="header__optionLineTwo">Sign In</span>
+                    <span className="header__optionLineTwo">Sign In</span> 
                 </div>
-            
+                </Link>
 
             
             <div className="header__option">

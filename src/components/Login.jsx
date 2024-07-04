@@ -19,7 +19,8 @@ function Login() {
         />
     </Link>
 
-    <div className='login__container w-[300px] h-fit flex flex-col boder-r-[5px] border-slate-300
+    <div 
+    className='login__container w-[300px] h-fit flex flex-col border rounded-sm border-slate-300
     p-[20px]'>
         <h1>Sign-in</h1>
         <form>

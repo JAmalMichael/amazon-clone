@@ -4,6 +4,7 @@ import Product from '../sections/Product'
 import Header from './Header'
 
 function Home() {
+
   return (
     <div>
 
