@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./components/Home"
 import Login from "./components/Login"
+import { useEffect } from "react";
+import { auth } from "./firebase";
 
 
 function App() {
