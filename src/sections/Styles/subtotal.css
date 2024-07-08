@@ -1,0 +1,14 @@
+
+  .subtotal__gift {
+    display: flex;
+    align-items: center;
+  }
+  
+  .subtotal__gift > input {
+    margin-right: 5px;
+  }
+  
+  .subtotal > button {
+    border-color: #a88734 #9c7e31 #846a29;
+    
+  }
