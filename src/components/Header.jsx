@@ -47,7 +47,7 @@ function Header() {
                 <span className="header__optionLineOne">Returns</span>
                 <span className="header__optionLineTwo">& Orders</span>
             </div>
-            
+           
             
 
             <div className="header__option">
@@ -55,14 +55,14 @@ function Header() {
             <span className="header__optionLineTwo">Prime</span>
             </div>
 
-            
+            <Link to="/checkout">
             <div className="header__optionBasket flex items-center text-white">
                 <FaShoppingCart />
                 <span className="header__optionLineTwo header__basketCount">
                 {basket?.length}
                 </span>
             </div>
-            
+            </Link>
         </div>
         </div>
   )

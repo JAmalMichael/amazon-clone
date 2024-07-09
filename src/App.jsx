@@ -3,9 +3,13 @@ import Home from "./components/Home"
 import Login from "./components/Login"
 import { useEffect } from "react";
 import { auth } from "./firebase";
+import Checkout from './components/Checkout'
+import { useStateValue } from "./api/StateProvider";
 
 
 function App() {
+
+  const [dispatch] = useStateValue();
 
   useEffect(() => {
 
@@ -32,6 +36,7 @@ function App() {
     <Routes>
         <Route index element={<Home />}/> 
         <Route path="/login" element={ <Login /> }/>
+        <Route path="/checkout" element={ <Checkout /> }/>
     </Routes>
     </BrowserRouter>
   )

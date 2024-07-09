@@ -5,6 +5,10 @@ import CheckoutProduct from '../sections/CheckoutProduct'
 import { useStateValue } from '../api/StateProvider';
 
 function Checkout() {
+
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  
   return (
     <div className="checkout flex p-[20px] bg-white">
       <div className="checkout__left">
