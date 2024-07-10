@@ -3,6 +3,7 @@ import './Styles/checkout.css'
 import Subtotal from '../sections/SubTotal';
 import CheckoutProduct from '../sections/CheckoutProduct'
 import { useStateValue } from '../api/StateProvider';
+import Header from './Header';
 
 function Checkout() {
 
@@ -10,6 +11,8 @@ function Checkout() {
 
   
   return (
+    <>
+    <Header />
     <div className="checkout flex p-[20px] bg-white">
       <div className="checkout__left">
         <img
@@ -39,6 +42,7 @@ function Checkout() {
         <Subtotal />
       </div>
     </div>
+    </>
   )
 }
 
