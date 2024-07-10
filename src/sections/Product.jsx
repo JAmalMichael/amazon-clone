@@ -24,7 +24,8 @@ function Product({ id, title, image, price, rating }) {
   };
 
   return (
-    <div className="product">
+    <div className="product  max-sm:w-[80%] max-sm:mx-auto max-sm:h-[400px] 
+    max-sm:justify-around max-md:h-[500px] max-md:justify-around">
     <div className="product__info">
       <p>{title}</p>
       <p className="product__price">
@@ -40,7 +41,7 @@ function Product({ id, title, image, price, rating }) {
       </div>
     </div>
 
-    <img src={image} alt="" />
+    <img src={image} alt="" className=' max-sm:mt-4 max-sm:w-[60%] max-sm:h-[100px] max-md:h-[150px]'/>
 
     <button onClick={addToBasket}>Add to Basket</button>
   </div>

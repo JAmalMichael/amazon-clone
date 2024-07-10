@@ -12,7 +12,7 @@ function SubTotal() {
 
   return (
             <div className="subtotal flex flex-col justify-between w-[300px] h-[400px] p-[20px]
-             bg-[#f3f3f3] border-[3px] border-[#dddddd] ">
+             bg-[#f3f3f3] border-[3px] border-[#dddddd] max-sm:w-[150px] max-sm:h-[200px]">
             <CurrencyFormat
             renderText={(value) => (
                 <>
@@ -32,7 +32,8 @@ function SubTotal() {
             prefix={"$"}
             />
 
-            <button className='bg-[#f0c14b] b-[2px] mt-[10px] text-[#111] h-[30px] w-100%]'>Proceed to Checkout</button>
+            <button className='bg-[#f0c14b] b-[2px] mt-[10px] text-[#111] h-[30px] 
+            w-100%] max-sm:text-[10px]'>Proceed to Checkout</button>
         </div>
   )
 }

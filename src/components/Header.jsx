@@ -21,19 +21,21 @@ function Header() {
             <Link
             to="/" >
             <img
-            className="header__logo w-[100px] object-contain my-0 mx-[20px] mt-[18px]"
+            className="header__logo w-[100px] object-contain my-0 mx-[20px] mt-[18px] max-sm:mx-1 
+            max-sm:w-[70px] max-[470px]:w-[60px]"
             src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
             />
             </Link>
             
         
 
-            <div className="header__search flex flex-1 items-center rounded-3xl">
-                <input className="header__searchInput h-[12px] p-[10px] w-[100%]" type="text" />
+            <div className="header__search flex flex-1 items-center rounded-3xl max-[470px]:hidden">
+                <input className="header__searchInput h-[12px] p-[10px] w-[100%] " 
+                type="text" />
                 <FaSearch className="header__searchIcon p-[2px] bg-[#cd9042]" />
             </div>
 
-            <div className="header__nav flex justify-evenly">
+            <div className="header__nav flex justify-evenly max-sm:p-2 ">
 
                 <Link to={!user && '/login'}>
                 <div className="header__option" onClick={handleAuthenticaton}> 

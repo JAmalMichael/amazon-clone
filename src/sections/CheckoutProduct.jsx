@@ -14,11 +14,11 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
     }
 
   return (
-    <div className='checkoutProduct flex my-[20px]'>
+    <div className='checkoutProduct flex my-[20px]  '>
     <img className='checkoutProduct__image' src={image} />
 
     <div className='checkoutProduct__info pl-[20px]'>
-        <p className='checkoutProduct__title text-[17px] font-extrabold'>{title}</p>
+        <p className='checkoutProduct__title text-[17px] font-extrabold max-sm:font-normal max-sm:text-[10px]'>{title}</p>
         <p className="checkoutProduct__price">
             <small>$</small>
             <strong>{price}</strong>
