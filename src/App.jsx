@@ -9,7 +9,7 @@ import { useStateValue } from "./api/StateProvider";
 
 function App() {
 
-  const [dispatch] = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
 
   useEffect(() => {
 

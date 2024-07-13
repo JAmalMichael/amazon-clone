@@ -11,11 +11,18 @@ function Login() {
     const signIn = e => {
             e.preventDefault();
 
-            auth.createUserWithEmailAndPassword(email, password)
-            .then(auth => {
-                navigate.push('/')
-            })
-            .catch(error => alert(error.message))
+        
+    }
+
+    const register = (e) => {
+        e.preventDefault();
+
+        auth.createUserWithEmailAndPassword(email, password)
+        .then((auth) => {
+            // navigate.push('/')
+            console.log(auth);
+        })
+        .catch(error => alert(error.message))
     }
 
 
@@ -35,12 +42,19 @@ function Login() {
         <h1>Sign-in</h1>
         <form>
             <h5>E-mail</h5>
-            <input type='text' value={email} onChange={e => setEmail(e.target.value)} />
+            <input type='text' value={email} 
+            onChange={e => setEmail(e.target.value)} 
+            className='p-2'
+            />
 
             <h5>Password</h5>
-            <input type='password' value={password} onChange={e => setPassword(e.target.value)} />
+            <input type='password' value={password} 
+            onChange={e => setPassword(e.target.value)} 
+            className='p-2'
+            />
 
             <button 
+            onClick={signIn}
             type='submit' 
             className='login__signInButton border-r-[2px] w-[100px] h-[30px] border mt-[10px] rounded-sm'>Sign In</button>
         </form>
@@ -49,7 +63,10 @@ function Login() {
             see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
         </p>
 
-        <button className='login__registerButton w-[100%] h-[30px] border mt-[10px]'>Create your Amazon account</button>
+        <button 
+        onClick={register}
+        type='submit'
+        className='login__registerButton w-[100%] h-[30px] border mt-[10px]'>Create your Amazon account</button>
     </div>
 </div>
   )
